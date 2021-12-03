@@ -9,10 +9,16 @@ CREATE TABLE products (
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),
-  type_of_phone TEXT
-  colour_id TEXT
-  type_of_phonecase
+  type_of_phone_id TEXT,
+  colour_id INTEGER,
+  type_of_phonecase_id INTEGER
 );
+
+DROP TABLE IF EXISTS type_of_phonecase;
+CREATE TABLE type_of_phonecase (
+  type_of_phonecase_id INTEGER PRIMARY KEY,
+  type_of_phonecase_name TEXT
+)
 
 DROP TABLE IF EXISTS type_of_phone ;
 CREATE TABLE soort (
@@ -20,18 +26,27 @@ CREATE TABLE soort (
   type_of_phone_name TEXT
 );
 
+DROP TABLE IF EXISTS type_of_phone.type_of_phonecase;
+CREATE TABLE type_of_phone.type_of_phonecase (
+  type_of_phone.type_of_phonecase_id INTEGER PRIMARY KEY,
+  type_of_phone_id INTEGER,
+  type_of_phonecase_id INTEGER
+)
+
 DROP TABLE IF EXISTS colour;
 CREATE TABLE colour (
- colour_id INTEGER PRIMARY KEY,
+ colour_id INTEGER PRIMARY KEY AUTOINCREMENT,
  colour_naam TEXT
 );
 
 DROP TABLE IF EXISTS product.colour;
 CREATE TABLE product.colour (
-  product.colour_id INTEGER PRIMARY KEY,
+  product.colour_id INTEGER PRIMARY KEY AUTOINCREMENT,
   product_id INTEGER,
   colour_id INTEGER
 )
+
+
 
 --
 -- populate with data
@@ -51,5 +66,10 @@ insert into products (name, description, code, price) values ('Velvet Goldmine',
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
 
-/*SELECT clients.id FROM clients
-JOIN products*/
+insert into colour (colour_naam) values ('Pink');
+insert into colour (colour_naam) values ('Green');
+insert into colour (colour_naam) values ('Blue');
+insert into colour (colour_naam) values ('Purple');
+
+insert into product.colour (type_of_phone_id, type_of_phonecase_id);
+
