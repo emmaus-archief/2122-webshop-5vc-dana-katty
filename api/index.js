@@ -70,10 +70,10 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT * FROM products WHERE category_id = ? ORDER BY id ASC')
+    const sqlOpdracht = db.prepare('SELECT * FROM products')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare('SELECT * FROM products ORDER BY id ASC')
+    const sqlOpdracht = db.prepare('SELECT products.name, type_of_case_name FROM products JOIN type_of_case ON products.type_of_case_id  = type_of_case.id')
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))
@@ -89,6 +89,23 @@ function getProductById(request, response) {
   const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
+}
+
+function getProductsAndColour (request, response) {
+  console.log('API ontvangt /api/products/?', request.query)
+
+  const category_id = parseInt(request.query.category)
+  let data = []
+  if (category_id > 0) {
+    const sqlOpdracht = db.prepare('SELECT * FROM products')
+    data = sqlOpdracht.all(category_id)
+  } else {
+    const sqlOpdracht = db.prepare('SELECT * FROM product.colour JOIN colour')
+    data = sqlOpdracht.all()
+  }
+  // console.log(JSON.stringify(data, null, 2))
+  response.status(200).send(data)
+  console.log('API verstuurt /api/products/')
 }
 
 /*
