@@ -73,7 +73,7 @@ function getProducts(request, response) {
     const sqlOpdracht = db.prepare('SELECT * FROM products')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare(SELECT * FROM products JOIN type_of_case ON type_of_case_id = c_id)
+    const sqlOpdracht = db.prepare('SELECT * FROM products JOIN type_of_case ON type_of_case_id = c_id')
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))
@@ -297,5 +297,3 @@ function sendMail(subject, body, recipent) {
   });
 
 } 
-
--- katty hier
