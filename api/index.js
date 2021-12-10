@@ -70,7 +70,7 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT * FROM products')
+    const sqlOpdracht = db.prepare('SELECT * FROM products JOIN type_of_case ON type_of_case_id = c_id')
     data = sqlOpdracht.all(category_id)
   } else {
     const sqlOpdracht = db.prepare('SELECT * FROM products JOIN type_of_case ON type_of_case_id = c_id')
@@ -86,7 +86,7 @@ function getProductById(request, response) {
 
   let data = []
   const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
+  const sqlOpdracht = db.prepare('SELECT * FROM products JOIN type_of_case ON type_of_case_id = c_id WHERE id = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
 }
