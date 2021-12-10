@@ -60,17 +60,17 @@ insert into products (name, description, code, price) values ('green heart phone
 insert into products (name, description, code, price) values ('Blue heart phone case', 'blauw telefoonhoesje met hartjes op de achterkant.', '445924201-X', 19.99);
 insert into products (name, description, code, price) values ('Purple heart phone case', 'paars telefoonhoesje met hartjes op de achterkant.' , '693155505-7', 19.99);
 insert into products (name, description, code, price) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Velvet Goldmine, Sed vel enim sit amet nunc viverra dapibus. Nulla su Curabitur at ipsum ac tellus semper interdum.', '492662523-7', 14);
+insert into products (name, description, code, price) values ('Velvet Goldmine, Sed vel enim sit amet nunc viverra dapibus. Nulla su Curabitur at ipsum ac tellus semper interdum.', 'error fix', '492662523-7', 14);
 
-insert into type_of_case (id, name) values (1, 'Flip cover');
-insert into type_of_case (id, name) values (2, 'Sillicon cover');
+insert into type_of_case (c_id, name) values (1, 'Flip cover');
+insert into type_of_case (c_id, name) values (2, 'Sillicon cover');
 
 insert into type_of_phone (type_of_phone_name) values ('Samsung Galaxy A52s');
 insert into type_of_phone (type_of_phone_name) values ('Samsung Galaxy S20');
 insert into type_of_phone (type_of_phone_name) values ('Apple iPhone SE');
 insert into type_of_phone (type_of_phone_name) values ('Apple iPhone 11');
 insert into type_of_phone (type_of_phone_name) values ('Apple iPhone 12');
-insert into type_of_phone (type_of_phone_name) values ('Apple iPhone 13')
+insert into type_of_phone (type_of_phone_name) values ('Apple iPhone 13');
 insert into type_of_phone (type_of_phone_name) values ('Xiaomi Poco X3 Pro ');
 insert into type_of_phone (type_of_phone_name) values ('Huawei P30');
 
@@ -98,7 +98,7 @@ insert into colour (colour_name) values ('Purple');
 insert into colour (colour_name) values ('Yellow');
 
 insert into product_colour (product_id, c_id) values (1, 1);
-insert into product_colour (product_id, c_ id) values (1, 2);
+insert into product_colour (product_id, c_id) values (1, 2);
 insert into product_colour (product_id, c_id) values (1, 3);
 insert into product_colour (product_id, c_id) values (1, 4);
 insert into product_colour (product_id, c_id) values (1, 5);
