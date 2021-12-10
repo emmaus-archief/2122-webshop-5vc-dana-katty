@@ -1,5 +1,5 @@
 --
--- create tables
+-- create my tables
 --
 
 DROP TABLE IF EXISTS products; 
