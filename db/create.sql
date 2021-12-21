@@ -55,17 +55,19 @@ CREATE TABLE product_colour (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, type_of_case_id) values ('Pink heart phone case', 'Roze telefoonhoesje met hartjes op de achterkant.', '816905633-0', 19.99, 0);
-insert into products (name, description, code, price, type_of_case_id) values ('green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 1);
-insert into products (name, description, code, price, type_of_case_id) values ('green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 1;
-insert into products (name, description, code, price, type_of_case_id) values ('green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 0);
-insert into products (name, description, code, price, type_of_case_id) values ('Blue heart phone case', 'blauw telefoonhoesje met hartjes op de achterkant.', '445924201-X', 19.99, 1);
-insert into products (name, description, code, price, type_of_case_id) values ('Purple heart phone case', 'paars telefoonhoesje met hartjes op de achterkant.' , '693155505-7', 19.99, 1);
-insert into products (name, description, code, price, type_of_case_id) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14, 2);
-insert into products (name, description, code, price, type_of_case_id) values ('Katty hoesje', 'Velvet Goldmine, Sed vel enim sit amet nunc viverra dapibus. Nulla su Curabitur at ipsum ac tellus semper interdum.', '492662523-7', 14, 1);
+insert into products (name, description, code, price, type_of_case_id) values ('Pink heart phone case', 'Roze telefoonhoesje met hartjes op de achterkant.', ' 816905633-0', 19.99, 1);
+insert into products (name, description, code, price, type_of_case_id) values ('Green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', ' 077030122-3', 19.99, 1);
+insert into products (name, description, code, price, type_of_case_id) values ('Blue heart phone case', 'Blauw telefoonhoesje met hartjes op de achterkant.', ' 077030122-3', 19.99, 1);
+insert into products (name, description, code, price, type_of_case_id) values ('Purple heart phone case', 'Paars telefoonhoesje met hartjes op de achterkant.', ' 077030122-3', 19.99, 1);
+insert into products (name, description, code, price, type_of_case_id) values ('Yellow heart phone case', 'Geel telefoonhoesje met hartjes op de achterkant.', ' 445924201-X', 19.99, 1);
+insert into products (name, description, code, price, type_of_case_id) values ('Pink flip phone cover', 'Roze telefoonhoesje om neer te zetten.' , ' 693155505-7', 14.00, 0);
+insert into products (name, description, code, price, type_of_case_id) values ('Green flip phone cover', 'Groen telefoonhoesje om neer te zetten', ' 686928463-6', 14.00, 0);
+insert into products (name, description, code, price, type_of_case_id) values ('Blue flip phone cover', 'Blauw telefoonhoesje om neer te zetten', ' 492662523-7', 14.00, 0);
+insert into products (name, description, code, price, type_of_case_id) values ('Purple flip phone cover', 'Paars telefoonhoesje om neer te zetten', ' 784306262-8', 14.00, 0);
+insert into products (name, description, code, price, type_of_case_id) values ('Yellow flip phone cover', 'Geel telefoonhoesje om neer te zetten', ' 678432952-3', 14.00, 0);
 
-insert into type_of_case (c_id, type_of_case_name) values (0, 'Flip cover');
-insert into type_of_case (c_id, type_of_case_name) values (1, 'Sillicon cover');
+insert into type_of_case (c_id, type_of_case_name) values (0, ' Flip cover');
+insert into type_of_case (c_id, type_of_case_name) values (1, ' Sillicon cover');
 
 insert into type_of_phone (type_of_phone_name) values ('Samsung Galaxy A52s');
 insert into type_of_phone (type_of_phone_name) values ('Samsung Galaxy S20');
