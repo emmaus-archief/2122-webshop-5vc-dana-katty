@@ -73,6 +73,7 @@ insert into products (name, description, code, price, type_of_case_id, merk_id) 
 insert into products (name, description, code, price, type_of_case_id, merk_id) values ('nog naamloos', 'Beschrijving', '123453474-8', 20.99, 1, 3);
 insert into products (name, description, code, price, type_of_case_id, merk_id) values ('nog naamloos', 'Beschrijving', '123453474-8', 20.99, 1, 1);
 
+
 insert into type_of_case (c_id, type_of_case_name) values (0, 'Flip cover');
 insert into type_of_case (c_id, type_of_case_name) values (1, 'Sillicon cover');
 
