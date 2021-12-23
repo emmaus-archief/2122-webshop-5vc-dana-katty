@@ -4,7 +4,7 @@
 
 DROP TABLE IF EXISTS products; 
 CREATE TABLE products (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255),
   description TEXT,
   code VARCHAR(15),
@@ -15,13 +15,13 @@ CREATE TABLE products (
 
 DROP TABLE IF EXISTS type_of_case;
 CREATE TABLE type_of_case (
-  c_id INTEGER PRIMARY KEY,
+  c_id INTEGER PRIMARY KEY AUTOINCREMENT,
   type_of_case_name TEXT
 ); 
 
 DROP TABLE IF EXISTS merk;
 CREATE TABLE merk (
- m_id INTEGER PRIMARY KEY,
+ m_id INTEGER PRIMARY KEY AUTOINCREMENT,
  merknaam TEXT
 );
 
@@ -62,25 +62,23 @@ CREATE TABLE product_colour (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (0, 'Pink heart phone case', 'Roze telefoonhoesje met hartjes op de achterkant.', '816905633-0', 19.99, 0, 1);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (1, 'green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 1, 1);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (2, 'green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 1, 0);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (3, 'green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 0, 1);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (4, 'Blue heart phone case', 'blauw telefoonhoesje met hartjes op de achterkant.', '445924201-X', 19.99, 1, 0);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (5, 'Purple heart phone case', 'paars telefoonhoesje met hartjes op de achterkant.' , '693155505-7', 19.99, 1, 2);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (6, 'nog naamloos', 'Beschrijving', '686928463-6', 14.99, 0, 2);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (7, 'nog naamloos', 'Beschrijving', '492662523-7', 14.99, 1, 3);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (8, 'nog naamloos', 'Beschrijving', '123453474-8', 20.99, 1, 3);
-insert into products (id, name, description, code, price, type_of_case_id, merk_id) values (9, 'nog naamloos', 'Beschrijving', '123453474-8', 20.99, 1, 1);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('Pink heart phone case', 'Roze telefoonhoesje met hartjes op de achterkant.', '816905633-0', 19.99, 1, 2);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 2, 2);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 2, 1);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('green heart phone case', 'Groen telefoonhoesje met hartjes op de achterkant.', '077030122-3', 19.99, 1, 2);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('Blue heart phone case', 'blauw telefoonhoesje met hartjes op de achterkant.', '445924201-X', 19.99, 2, 1);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('Purple heart phone case', 'paars telefoonhoesje met hartjes op de achterkant.' , '693155505-7', 19.99, 2, 2);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('nog naamloos', 'Beschrijving', '686928463-6', 14.99, 1, 3);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('nog naamloos', 'Beschrijving', '492662523-7', 14.99, 2, 2);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('nog naamloos', 'Beschrijving', '123453474-8', 20.99, 2, 2);
+insert into products (name, description, code, price, type_of_case_id, merk_id) values ('nog naamloos', 'Beschrijving', '123453474-8', 20.99, 2, 1);
 
+insert into type_of_case (type_of_case_name) values ('Flip cover');
+insert into type_of_case (type_of_case_name) values ('Sillicon cover');
 
-
-insert into type_of_case (c_id, type_of_case_name) values (0, 'Flip cover');
-insert into type_of_case (c_id, type_of_case_name) values (1, 'Sillicon cover');
-
-insert into merk (m_id, merknaam) values (0, 'Katty Chanel');
-insert into merk (m_id, merknaam) values (1, 'Dana Dior');
-insert into merk (m_id, merknaam) values (2, 'Merkloos');
+insert into merk (merknaam) values ('Katty Chanel');
+insert into merk (merknaam) values ('Dana Dior');
+insert into merk (merknaam) values ('Merkloos');
 
 insert into type_of_phone (type_of_phone_name) values ('Samsung Galaxy A52s');
 insert into type_of_phone (type_of_phone_name) values ('Samsung Galaxy S20');
