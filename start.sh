@@ -8,4 +8,3 @@ sqlite3 db/my.db < db/create.sql
 echo starting api and static webserver
 cd api
 node index.js
-node kattychanel.js
