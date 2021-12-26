@@ -10,7 +10,7 @@ of in Gitpod (gitpod is zonder mailen van orders en zonder permanent hosten):
 - *telefoonhoesjes*
 ### Deze webshop is gemaakt door: 
 - *Katty Su* 
--  *Dana Scholte*
+- *Dana Scholte*
 
 # Mijn aanpak
 Werk de planning af van boven naar beneden<br>
